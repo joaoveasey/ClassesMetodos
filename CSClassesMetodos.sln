@@ -9,15 +9,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2Metodos", "2Metodos\2Metod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.1MetodosComParametros", "2.1MetodosComParametros\2.1MetodosComParametros.csproj", "{579353D1-8CDD-47A7-AD6F-2828F269C2DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.2MetodosComParametros", "2.2MetodosComParametros\2.2MetodosComParametros.csproj", "{629CD406-5C9A-407C-BFBD-AA7BEAE19358}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.2MetodosComParametros", "2.2MetodosComParametros\2.2MetodosComParametros.csproj", "{629CD406-5C9A-407C-BFBD-AA7BEAE19358}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3Construtores", "3Construtores\3Construtores.csproj", "{9477589C-DCF8-432C-B1C0-E21DB60EF626}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3Construtores", "3Construtores\3Construtores.csproj", "{9477589C-DCF8-432C-B1C0-E21DB60EF626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.1Construtores", "3.1Construtores\3.1Construtores.csproj", "{C40103DF-F968-4081-B56E-E4D85F36B74F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.1Construtores", "3.1Construtores\3.1Construtores.csproj", "{C40103DF-F968-4081-B56E-E4D85F36B74F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4This", "4This\4This.csproj", "{F467E93A-2492-42FE-AD76-9080F4D15411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4This", "4This\4This.csproj", "{F467E93A-2492-42FE-AD76-9080F4D15411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicoPratico1", "ExercicoPratico1\ExercicoPratico1.csproj", "{5D3401EA-C1D4-4F1C-9275-22CB58CE4AA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicoPratico1", "ExercicoPratico1\ExercicoPratico1.csproj", "{5D3401EA-C1D4-4F1C-9275-22CB58CE4AA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.3MetodosComRetorno", "2.3MetodosComRetorno\2.3MetodosComRetorno.csproj", "{6D979F21-DA39-405B-82CD-A28E0A53EF70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.3MetodosComRetorno2", "2.3MetodosComRetorno2\2.3MetodosComRetorno2.csproj", "{F9EBC913-570D-4CE7-BD4C-6702EBB96BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.4Metodos", "2.4Metodos\2.4Metodos.csproj", "{BC8B8407-C4B4-48F8-B35B-62E40E7FC331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5PassandoArgumentosPorValor", "5PassandoArgumentosPorValor\5PassandoArgumentosPorValor.csproj", "{6AB81F30-8334-41A0-843F-7F1A3C1D0A23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +65,22 @@ Global
 		{5D3401EA-C1D4-4F1C-9275-22CB58CE4AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D3401EA-C1D4-4F1C-9275-22CB58CE4AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D3401EA-C1D4-4F1C-9275-22CB58CE4AA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D979F21-DA39-405B-82CD-A28E0A53EF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D979F21-DA39-405B-82CD-A28E0A53EF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D979F21-DA39-405B-82CD-A28E0A53EF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D979F21-DA39-405B-82CD-A28E0A53EF70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9EBC913-570D-4CE7-BD4C-6702EBB96BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9EBC913-570D-4CE7-BD4C-6702EBB96BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9EBC913-570D-4CE7-BD4C-6702EBB96BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9EBC913-570D-4CE7-BD4C-6702EBB96BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC8B8407-C4B4-48F8-B35B-62E40E7FC331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8B8407-C4B4-48F8-B35B-62E40E7FC331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8B8407-C4B4-48F8-B35B-62E40E7FC331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8B8407-C4B4-48F8-B35B-62E40E7FC331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB81F30-8334-41A0-843F-7F1A3C1D0A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB81F30-8334-41A0-843F-7F1A3C1D0A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB81F30-8334-41A0-843F-7F1A3C1D0A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB81F30-8334-41A0-843F-7F1A3C1D0A23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
