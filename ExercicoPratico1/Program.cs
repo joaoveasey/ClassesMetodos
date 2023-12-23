@@ -57,9 +57,31 @@ ford.Potencia = 120;
 //Console.WriteLine(ford.Potencia);
 //nesse caso acima o valor mostrado continua 120, pois o argumento foi por valor, ou seja nao afeta o valor original
 
-ford.AumentarPotencia(ref ford.Potencia);
-Console.WriteLine(ford.Potencia);
+//ford.AumentarPotencia(ref ford.Potencia);
+//Console.WriteLine(ford.Potencia);
 //nesse caso acima o valor mostra 125, pois o argumento foi por referência (ref), ou seja, irão se referenciar ao mesmo espaço da memória (obtendo o mesmo valor)
+
+//uso do out --> faz com que possamos retornar dois resultados de um mesmo metodo, neste caso retorno a potencia e a velocidade
+//Carro carro1 = new();
+//carro1.Potencia = 200;
+
+//double aumentoPotencia = carro1.AumentarPotenciaVelocidade(carro1.Potencia, out double velocidade);
+//Console.WriteLine($"Potência: {aumentoPotencia}cv\nVelocidade máxima: {velocidade} km/h");
+
+//uso dos argumentos nomeados e parâmetros opcionais
+//os parâmetros opcionais: servem para você omitir algum parâmetro, devem ser definidos depois da definição dos parâmetros normais
+//argumentos nomeados: permitem que você especifique um argumento, ao invés de passar em sua ordem na lista de parâmetros
+Carro volvo = new();
+
+//volvo.ExibirInfo(modelo: "SUV", montadora: "Volvo", marca: "XC60", potencia: 150);//primeiro sem informar o ano, sendo recebido o valor nomeado no parâmetro do método
+
+volvo.ExibirInfo(modelo: "SUV", montadora: "Volvo", marca: "XC60", potencia: 150, ano: "2023");
+
+//O modificador static permite declarar um membro estático que pertence ao próprio tipo e não a um objeto específico.Ele pode ser usado para
+//declarar classes, structs e interfaces.
+Carro.ObterValorIpva();
+Console.WriteLine($"Valor do campo ValorIpva: {Carro.ValorIpva} %");
+
 
 Console.ReadKey();
 
@@ -76,6 +98,23 @@ public class Carro
         Montadora = montadora;
         Modelo = modelo; //ao atribuir esse construtor os atributos Marca, Ano, Potencia receberão seus valores padrão (0 ou null)
     }
+    public Carro()
+    {
+        
+    }
+    public static double ValorIpva;
+    public static void ObterValorIpva()
+    {
+        ValorIpva = 4;
+    }
+    public void ExibirInfo(string? modelo, string? montadora, string? marca, int potencia, string? ano = "Padrão")
+    {
+        Console.Write($"Modelo: {modelo}\n");
+        Console.Write($"Montadora: {montadora}\n");
+        Console.Write($"Marca: {marca}\n");
+        Console.Write($"Potência: {potencia}\n");
+        Console.Write($"Ano: {ano}\n\n");
+    }
 
     public double VelocidadeMaxima(int potencia)
     {
@@ -89,6 +128,11 @@ public class Carro
     public int AumentarPotencia(ref int potencia)
     {
         return potencia += 5;
+    }
+    public int AumentarPotenciaVelocidade(int potencia, out double velocidade)
+    {
+        velocidade = potencia * 1.75;      
+        return potencia += 7;
     }
     public void Acelerar()
     {
