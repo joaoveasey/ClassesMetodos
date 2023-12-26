@@ -66,19 +66,27 @@ Carro volvo = new();
 //ford.Ano = 2023;
 //Console.WriteLine(ford.Ano);
 
-Console.WriteLine($"{Cores.Branco} - {(int)Cores.Branco}");
-Console.WriteLine($"{Cores.Vermelho} - {(int)Cores.Vermelho}");
-Console.WriteLine($"{Cores.Preto} - {(int)Cores.Preto}");
-Console.WriteLine($"{Cores.Cinza} - {(int)Cores.Cinza}");
-Console.WriteLine($"{Cores.Prata} - {(int)Cores.Prata}");
-Console.WriteLine($"{Cores.Azul} - {(int)Cores.Azul}");
+//Console.WriteLine($"{Cores.Branco} - {(int)Cores.Branco}");
+//Console.WriteLine($"{Cores.Vermelho} - {(int)Cores.Vermelho}");
+//Console.WriteLine($"{Cores.Preto} - {(int)Cores.Preto}");
+//Console.WriteLine($"{Cores.Cinza} - {(int)Cores.Cinza}");
+//Console.WriteLine($"{Cores.Prata} - {(int)Cores.Prata}");
+//Console.WriteLine($"{Cores.Azul} - {(int)Cores.Azul}");
 
-Console.WriteLine("Selecione a cor teclando seu valor: ");
-int cor = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Selecione a cor teclando seu valor: ");
+//int cor = Convert.ToInt32(Console.ReadLine());
 
-Carro chevrolet = new("Sedan", "Chevrolet", "Onix", 2016, 110, cor);
+Carro chevrolet = new("Sedan", "Chevrolet", "Onix", 2016, 110 /*cor*/);
 
-chevrolet.ExibirInfo(chevrolet.Modelo, chevrolet.Montadora, chevrolet.Marca, chevrolet.Potencia, chevrolet.Cor);
+//chevrolet.ExibirInfo(chevrolet.Modelo, chevrolet.Montadora, chevrolet.Marca, chevrolet.Potencia, chevrolet.Cor);
+
+//Qual o efeito de alterar o modificador de acesso do campo estático ValorIpva de public para internal ?
+//r: o acesso public faz com que o método seja "enxergado" por todos os assemblys, o internal faz com que apenas as classes 
+//deste assembly enxergue este método.
+
+//Qual o efeito de alterar o modificador de acesso do campo estático ValorIpva de public para private ?
+//private faz com que o método não seja visível para as demais classes, ou seja, nenhuma classe pode acessá-lo.
+//Console.WriteLine(chevrolet.ValorIpva(4.00));
 
 Console.ReadKey();
 
@@ -90,7 +98,7 @@ public class Carro
     public string? Montadora;
     public string? Marca;
     public int Potencia;
-    public int Cor;
+    //public int Cor;
     private int ano;
     public int Ano 
     {
@@ -106,12 +114,12 @@ public class Carro
         } 
     }
 
-    public Carro(string? modelo, string? montadora, string? marca, int ano, int potencia, int cor)
+    public Carro(string? modelo, string? montadora, string? marca, int ano, int potencia /*int cor*/)
     {
         Montadora = montadora;
         Modelo = modelo; //ao atribuir esse construtor os atributos Marca, Ano, Potencia receberão seus valores padrão (0 ou null)
         Marca = marca;
-        Cor = cor;
+        //Cor = cor;
         Ano = ano;
         Potencia = potencia;
     }
@@ -119,11 +127,11 @@ public class Carro
     {
         
     }
-    public static double ValorIpva;
-    public static void ObterValorIpva()
-    {
-        ValorIpva = 4;
-    }
+    //static Carro()
+    //{
+    //    ValorIpva = 4;
+    //}
+    
     public void ExibirInfo(string? Modelo, string? Montadora, string? Marca, int Potencia, int Cor = 1)
     {
         Console.WriteLine(Modelo);
