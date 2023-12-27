@@ -52,26 +52,30 @@
 //os métodos estáticos pertencem a classe, ou seja não precisam da instanciação de um objeto para serem chamados, tem a seguinte sintaxe: Classe.Metodo();
 
 //18- O que é um campo estático e qual o seu comportamento ?
-
+//é um campo usado para ser inicializado antes de qualquer dado estático, e que será somente executado uma vez na execução do programa.
 
 //19 - O que são propriedades ?
-
+//combinação de um campo privado e dois acessadores, o get (como o dado vai ser recebido) e o set(como o dado vai ser colocado no sistema), 
+//suas vantagens são: -permitem um controle maior de como os dados se comportam no sistema; -deixam o código mais flexível;
 
 //20- Qual a diferença entre campos e propriedades ?
-
+//as propriedades permitem um controle maior dos dados, enquanto nas classes, podemos ler e escrever (get e set) qualquer atributo, com as propriedades
+//podemos definir melhor os parâmetros que podem ou não entrar.
 
 //21- O que é uma struct ?
-
+//struct possui as mesmas funcionalidades que uma classe, porém, enquanto a classe guarda seus dados na memória HEAP, uma struct guarda seus dados na memória stack,
+//sendo uma alternativa mais leve que a classe, porém, não podemos guardar muitos dados, por conta da STACK possuir menos espaço, correndo o risco de um stack overflow.
 
 //22- Qual a diferença entre uma struct e uma classe ?
-
+//a struct guarda seus dados na memória STACK e a classe na memória HEAP, classe é mais recomendada para grande quantidade de dados.
 
 //23- O que é uma Enum ?
-
+//é um tipo de classe que se comporta como um array, podendo guardar objetos e ser acessado a partir de seu índice, podemos definir seu índice no enum.
 
 //24- Quais são e qual o escopo dos modificadores de acesso ?
-
+//public: acesso geral a todos os assemblys, private: acesso apenas a classe em que foi criado, protected: o assmebly pode ser acessado na própria classe 
+//e também nas classes filhas.
 
 //25- Qual a regra geral para usar os modificadores de acesso ?
-
+//são palavras que definem o acesso de um campo, método e classe, um exemplo de um método com modificador público: public void MeuMetodoPublico(){  }.
 
