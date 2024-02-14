@@ -34,12 +34,57 @@
 
 //---------- usando um delegate FUNCTION -----------
 
-double numero = Convert.ToDouble(Console.ReadLine());
+//double numero = Convert.ToDouble(Console.ReadLine());
 
-Func<double,double> raizQuadrada = x => Math.Sqrt(x);
+//Func<double,double> raizQuadrada = x => Math.Sqrt(x);
 
-double resultado = raizQuadrada(numero);
+//double resultado = raizQuadrada(numero);
 
-Console.WriteLine(resultado);
+//Console.WriteLine(resultado);
 
-Console.ReadKey();
+//Console.ReadKey();
+
+//----------- usando eventos -----------------
+
+Console.WriteLine("\nUsando o evento OnCriarPedido");
+
+var pedido = new Pedido();
+
+pedido.OnCriarPedido += Email.Enviar;
+pedido.OnCriarPedido += SMS.Enviar;
+
+pedido.CriarPedido();
+
+Console.ReadLine();
+
+delegate void PedidoEventHandler();
+
+class Pedido
+{
+    public event PedidoEventHandler? OnCriarPedido;
+    public void CriarPedido()
+    {
+        Console.WriteLine("\nPedido criado!!");
+        if(OnCriarPedido != null)
+        {
+            OnCriarPedido();
+        }
+    }
+}
+
+class Email
+{
+    public static void Enviar()
+    {
+        Console.WriteLine("\nEnviando um email");
+    }
+}
+
+class SMS
+{
+    public static void Enviar()
+    {
+        Console.WriteLine("\nEnviando um SMS");
+    }
+}
+
